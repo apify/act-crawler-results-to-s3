@@ -29,12 +29,9 @@ You can find Apifier API token(Manage Acts token) on [your Apifier account page]
 ```
 
 **Parameters:**
-**`awsS3Params`**
-Overwrites [S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
-accessKeyId, secretAccessKey, params.Bucket are required
 
-**`executionResultsParams`**
-Overwrites [apify execution results params](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
+**`awsS3Params`** - Overwrites [S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property). AccessKeyId, secretAccessKey, params.Bucket are required.
 
-**`itemsPerFile`**
-Number of items, which are saved in one bucket file.
+**`executionResultsParams`** - Overwrites [apify execution results params](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
+
+**`itemsPerFile`** - Number of items, which are saved in one bucket file.
