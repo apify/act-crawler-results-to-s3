@@ -1,7 +1,7 @@
 # act-crawler-results-to-s3
 Apify act to upload results from crawler to S3.
 ## INPUT
-```json
+```javascript
 {
   // Crawler execution ID
   "_id": String,
