@@ -7,7 +7,8 @@ It designed to run from Apify crawler finish webhook.
 For specific crawler set:
 
 ### Finish webhook URL (`finishWebhookUrl`)
-https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs
+https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs?token=APIFIER_API_TOKEN
+You can find Apifier API token(Manage Acts token) on [your Apifier account page](https://www.apifier.com/account#api-integrations).
 
 ### Finish webhook data(`finishWebhookData`)
 **Example:**
