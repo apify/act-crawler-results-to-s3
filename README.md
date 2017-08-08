@@ -12,26 +12,37 @@ Apify act to upload results from crawler to S3.
   // Crawler ID
   "actId": String,
 
-  // Data
-  "data": {
-
-    // Params of S3
-    // accessKeyId and secretAccessKey is required
-    "awsS3Params": {
-      "accessKeyId": String,
-      "secretAccessKey": String
-    },
-
-    // Params of Apify execution results
-    "executionResultsParams": {
-      "format": String
-    },
-
-    // Bucket name
-    "awsS3Bucket": String,
-
-    // Nuber of items in one file, default is 1000
-    "fileItemCounts": Number
-  }
+  // Finish webhook data, see below
+  "data": String
 }
 ```
+
+### Finish webhookdata
+
+#### Example
+```json
+{
+  "awsS3Params": {
+    "params": {
+      "Bucket": "my-bucket"
+    },
+    "accessKeyId": "JighjGHklkfjh79dfds80",
+    "secretAccessKey": "DA4dgweds56hdasdasd"
+  },
+  "executionResultsParams": {
+    "format": "jsonl"
+  },
+  "itemsPerFile": 1000
+}
+```
+
+#### Parameters:
+**`awsS3Params`**
+Overwrites [S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
+accessKeyId, secretAccessKey, params.Bucket are required
+
+**`executionResultsParams`**
+Overwrites [apify execution results params](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
+
+**`itemsPerFile`**
+Number of items, which are saved in one bucket file.
