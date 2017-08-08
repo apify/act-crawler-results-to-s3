@@ -25,7 +25,10 @@ Apify act to upload results from crawler to S3.
     },
 
     // Bucket name
-    "awsS3Bucket": String
+    "awsS3Bucket": String,
+
+    // Nuber of items in one file, default is 1000
+    "fileItemCounts": Number
   }
 }
 ```
