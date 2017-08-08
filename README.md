@@ -1,6 +1,9 @@
 # act-crawler-results-to-s3
 Apify act to upload results from crawler to S3.
+
 ## INPUT
+[S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
+[Apify execution results params](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
 ```javascript
 {
   // Crawler execution ID
@@ -12,14 +15,14 @@ Apify act to upload results from crawler to S3.
   // Data
   "data": {
 
-    // [Params of S3](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
+    // Params of S3
     // accessKeyId and secretAccessKey is required
     "awsS3Params": {
       "accessKeyId": String,
       "secretAccessKey": String
     },
 
-    // [Params of Apify execution results](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
+    // Params of Apify execution results
     "executionResultsParams": {
       "format": String
     },
