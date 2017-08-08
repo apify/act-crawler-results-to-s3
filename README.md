@@ -1,25 +1,16 @@
 # act-crawler-results-to-s3
 Apify act to upload results from crawler to S3.
+It designed to run from Apify crawler finish webhook.
 
-## INPUT
-[S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
-[Apify execution results params](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results)
-```javascript
-{
-  // Crawler execution ID
-  "_id": String,
+## Usage
 
-  // Crawler ID
-  "actId": String,
+For specific crawler set:
 
-  // Finish webhook data, see below
-  "data": String
-}
-```
+### Finish webhook URL (`finishWebhookUrl`)
+https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs
 
-### Finish webhookdata
-
-#### Example
+### Finish webhook data(`finishWebhookData`)
+**Example:**
 ```json
 {
   "awsS3Params": {
@@ -36,7 +27,7 @@ Apify act to upload results from crawler to S3.
 }
 ```
 
-#### Parameters:
+**Parameters:**
 **`awsS3Params`**
 Overwrites [S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
 accessKeyId, secretAccessKey, params.Bucket are required
