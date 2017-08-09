@@ -4,11 +4,12 @@ It is designed to run from [crawler finish webhook](https://www.apifier.com/docs
 
 ## Usage
 
-For a specific crawler set:
+For a specific crawler set the following parameters:
 
 ### Finish webhook URL (`finishWebhookUrl`)
 `https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs?token=APIFIER_API_TOKEN`
-You can find Apifier API token on [your Apifier account page](https://www.apifier.com/account#api-integrations).
+
+You can find your API token on [your Apifier account page](https://www.apifier.com/account#api-integrations).
 
 ### Finish webhook data (`finishWebhookData`)
 **Example:**
