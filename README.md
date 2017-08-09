@@ -24,7 +24,8 @@ You can find your API token on [your Apifier account page](https://www.apifier.c
     "secretAccessKey": "DA4dgweds56hdasdasd"
   },
   "executionResultsParams": {
-    "format": "jsonl"
+    "format": "json",
+    "simplified": 1
   },
   "itemsPerFile": 1000
 }
