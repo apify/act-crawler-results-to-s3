@@ -34,15 +34,15 @@ Apify.main(async () => {
     let state = await Apify.getValue('STATE') || DEFAULT_STATE;
 
     // Set default values
-    const fileItemCounts = finishWebhookData.fileItemCounts || 1000;
+    const itemsPerFile = finishWebhookData.itemsPerFile || 1000;
     const executionResultsParams = finishWebhookData.executionResultsParams || {};
     const awsS3Params = finishWebhookData.awsS3Params || {};
 
-    // Downloa data and save them to s3
+    // Download data and save them to s3
     const s3 = new AWS.S3(awsS3Params);
     let lastCount = 0;
     while (true) {
-        const executionResultsList = await Apify.client.crawlers.getExecutionResults(Object.assign(executionResultsParams, { executionId: input._id, limit: fileItemCounts, offset: state.offset }));
+        const executionResultsList = await Apify.client.crawlers.getExecutionResults(Object.assign(executionResultsParams, { executionId: input._id, limit: itemsPerFile, offset: state.offset }));
         lastCount = parseInt(executionResultsList.count);
 
         if (lastCount === 0) break;
@@ -59,7 +59,7 @@ Apify.main(async () => {
         state.offset += lastCount;
         state.storeCount++;
         await Apify.setValue('STATE', state);
-        console.log(`Saved ${lastCount} to file ${awsS3Params.params.Bucket}/${fileName}`);
+        console.log(`Saved ${lastCount} web pages to file ${awsS3Params.params.Bucket}/${fileName}`);
     }
 
     console.log('Act finished');
