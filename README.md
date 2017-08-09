@@ -7,12 +7,13 @@ It is designed to run from [crawler finish webhook](https://www.apifier.com/docs
 For a specific crawler set the following parameters:
 
 ### Finish webhook URL (`finishWebhookUrl`)
-`https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs?token=APIFIER_API_TOKEN`
+```
+https://api.apifier.com/v2/acts/vRrWzZg7LH29horY8/runs?token=APIFIER_API_TOKEN
+```
 
 You can find your API token on [your Apifier account page](https://www.apifier.com/account#api-integrations).
 
 ### Finish webhook data (`finishWebhookData`)
-**Example:**
 ```json
 {
   "awsS3Params": {
@@ -31,7 +32,7 @@ You can find your API token on [your Apifier account page](https://www.apifier.c
 
 **Parameters:**
 
-**`awsS3Params`** - Overwrites [S3 params](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property). `AccessKeyId`, `secretAccessKey` and `params.Bucket` are required.
+**`awsS3Params`** - Specifies [AWS SDK's S3 constructor parameters](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property) used for the upload. Note that `AccessKeyId`, `secretAccessKey` and `params.Bucket` are required.
 
 **`executionResultsParams`** - Overwrites [Apifier crawler execution results API call parameters](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results).
 
