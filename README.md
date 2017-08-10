@@ -21,7 +21,8 @@ You can find your API token on [your Apifier account page](https://www.apifier.c
       "Bucket": "my-bucket"
     },
     "accessKeyId": "JighjGHklkfjh79dfds80",
-    "secretAccessKey": "DA4dgweds56hdasdasd"
+    "secretAccessKey": "DA4dgweds56hdasdasd",
+    "region": "us-west-2"
   },
   "executionResultsParams": {
     "format": "json",
@@ -30,6 +31,7 @@ You can find your API token on [your Apifier account page](https://www.apifier.c
   "itemsPerFile": 1000
 }
 ```
+Note: AWS user must have access to S3 bucket.
 
 **Parameters:**
 
