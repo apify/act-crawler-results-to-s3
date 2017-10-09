@@ -1,6 +1,6 @@
 # act-crawler-results-to-s3
 Apify act to upload results from Apify crawler to AWS S3.
-It is designed to run from [crawler finish webhook](https://www.apifier.com/docs#finishWebhookUrl).
+It is designed to run from [crawler finish webhook](https://www.apify.com/docs#crawler-finishWebhookUrl).
 
 ## Usage
 
@@ -8,10 +8,10 @@ For a specific crawler set the following parameters:
 
 ### Finish webhook URL (`finishWebhookUrl`)
 ```
-https://api.apifier.com/v2/acts/wLuJuoFw3g3YPgqHf/runs?token=APIFIER_API_TOKEN
+https://api.apify.com/v2/acts/wLuJuoFw3g3YPgqHf/runs?token=APIFIER_API_TOKEN
 ```
 
-You can find your API token on [your Apifier account page](https://www.apifier.com/account#api-integrations).
+You can find your API token on [your Apifier account page](https://my.apify.com/account#/integrations).
 
 ### Finish webhook data (`finishWebhookData`)
 ```json
@@ -37,7 +37,7 @@ Note: AWS user must have access to S3 bucket.
 
 **`awsS3Params`** - Specifies [AWS SDK's S3 constructor parameters](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property) used for the upload. Note that `AccessKeyId`, `secretAccessKey` and `params.Bucket` are required.
 
-**`executionResultsParams`** - Overwrites [Apifier crawler execution results API call parameters](https://www.apifier.com/api-reference#/reference/results/execution-results/get-execution-results).
+**`executionResultsParams`** - Overwrites [Apifier crawler execution results API call parameters](https://www.apify.com/docs/api-v1#/reference/results/execution-results/get-execution-results).
 
 **`itemsPerFile`** - Number of web pages to store per file in S3. By default it is 1000.
 
