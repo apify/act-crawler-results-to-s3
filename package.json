@@ -1,0 +1,25 @@
+{
+  "name": "act-crawler-results-to-s3",
+  "version": "1.0.0",
+  "description": "Apify act to upload results from Apify crawler to AWS S3. It is designed to run from [crawler finish webhook](https://www.apify.com/docs#crawler-finishWebhookUrl).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apifier/act-crawler-results-to-s3.git"
+  },
+  "author": "Jakub Drobnik <jakub.drobnik@apify.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Apifier/act-crawler-results-to-s3/issues"
+  },
+  "homepage": "https://github.com/Apifier/act-crawler-results-to-s3#readme",
+  "dependencies": {
+    "apify": "^0.4.29",
+    "aws-sdk": "^2.140.0",
+    "left-pad": "^1.1.3",
+    "type-check": "^0.3.2"
+  }
+}
