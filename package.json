@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Apifier/act-crawler-results-to-s3.git"
+    "url": "git+https://github.com/apifytech/act-crawler-results-to-s3.git"
   },
   "author": "Jakub Drobnik <jakub.drobnik@apify.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Apifier/act-crawler-results-to-s3/issues"
+    "url": "https://github.com/apifytech/act-crawler-results-to-s3/issues"
   },
-  "homepage": "https://github.com/Apifier/act-crawler-results-to-s3#readme",
+  "homepage": "https://github.com/apifytech/act-crawler-results-to-s3#readme",
   "dependencies": {
     "apify": "^0.4.29",
     "aws-sdk": "^2.140.0",
