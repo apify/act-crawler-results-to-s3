@@ -1,5 +1,5 @@
 # act-crawler-results-to-s3
-Apify act to upload results from Apify crawler to AWS S3.
+Apify actor to upload results from Apify crawler to AWS S3.
 It is designed to run from [crawler finish webhook](https://www.apify.com/docs#crawler-finishWebhookUrl).
 
 ## Usage
@@ -42,5 +42,5 @@ Note: AWS user must have access to S3 bucket.
 **`itemsPerFile`** - Number of web pages to store per file in S3. By default it is 1000.
 
 ## Files on AWS S3
-Act saves files to a specific Bucket with file name:
+The actor saves files to a specific Bucket with file name:
 executionId_fileNumber.resultsFormat (e.g: `gjGZ6hdj6ZHhs_000000001.json`)
